@@ -3,6 +3,6 @@
 
 ##  List of Modules
 
-* [series-toc](https://github.com/mbrejla/hugo-modules/series-toc/)  
+* [series-toc](https://github.com/mbrejla/hugo-modules/tree/main/series-toc
+)  
 Shortcode for grouping articles belonging to a 'series'.
-
