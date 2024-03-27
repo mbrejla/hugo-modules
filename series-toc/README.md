@@ -51,6 +51,15 @@ series_order: 01
 series_open: true
 ---
 ```
+
+You can also set the default open state globally via your params.toml
+
+```toml
+[article]
+  series_open = true
+```
+
+
 ### Article Body
 
 Add this shortcode wherever you want the series-toc to appear in your article:
