@@ -1,57 +1,63 @@
 .series-toc {
-    @apply ml-4 mr-6 mt-4;
-    @apply rounded;
-    @apply overflow-hidden;
-    
-    summary {
-      @apply text-lg font-semibold;
-      @apply text-neutral-700;
-      @apply bg-neutral-200;
-      @apply p-2 pl-4;
-      cursor: pointer;
-    }
-    #SeriesToc {
-      @apply bg-neutral-100;
-      @apply py-4 px-4;
-      ul {
-        @apply m-0 pt-2 pl-2;
-        @apply list-none;
-        li {
-          @apply m-0 mb-2;
-          @apply text-neutral-700;
-          a {
-            @apply no-underline;
-            @apply text-neutral-700;
-            &:hover {
-              @apply underline;
-              @apply text-neutral-900;
-              @apply decoration-neutral-900;
-            }
+  margin-left: 1rem;
+  margin-right: 1.5rem;
+  margin-top: 1rem;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  summary {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    font-weight: 600;
+    color: rgb(64, 64, 64);
+    background-color: rgb(229, 229, 229);
+    padding: 0.5rem;
+    padding-left: 1rem;
+    cursor: pointer;
+  }
+  #SeriesToc {
+    background-color: rgb(245, 245, 245);
+    padding: 1rem;
+    ul {
+      margin: 0px;
+      padding-top: 0.5rem;
+      padding-left: 0.5rem;
+      list-style-type: none;
+      li {
+        margin: 0px;
+        margin-bottom: 0.5rem;
+        color: rgb(64, 64, 64);
+        a {
+          text-decoration-line: none;
+          color: rgb(64, 64, 64);
+          &:hover {
+            text-decoration-line: underline;
+            color: rgb(23, 23, 23);
+            text-decoration-color: rgb(23, 23, 23);
           }
-       }
-      }
+        }
+     }
     }
   }
-  
-  .dark {
-    summary {
-      @apply text-neutral-200;
-      @apply bg-neutral-600;
-    }
-    #SeriesToc {
-      @apply bg-neutral-700;
-      ul {
-        li {
-          @apply text-neutral-200;
-          a {
-            @apply text-neutral-200;
-            &:hover {
-              @apply text-neutral-50;
-              @apply decoration-neutral-50;
-            }
+}
+
+.dark {
+  summary {
+    color: rgb(229, 229, 229);
+    background-color: rgb(82, 82, 82);
+  }
+  #SeriesToc {
+    background-color: rgb(64, 64, 64);
+    ul {
+      li {
+        color: rgb(229, 229, 229);
+        a {
+          color: rgb(229, 229, 229);
+          &:hover {
+            color: rgb(250, 250, 250);
+            text-decoration-color: rgb(250, 250, 250);
           }
         }
       }
     }
   }
-  
+}
