@@ -1,0 +1,57 @@
+.series-toc {
+    @apply ml-4 mr-6 mt-4;
+    @apply rounded;
+    @apply overflow-hidden;
+    
+    summary {
+      @apply text-lg font-semibold;
+      @apply text-neutral-700;
+      @apply bg-neutral-200;
+      @apply p-2 pl-4;
+      cursor: pointer;
+    }
+    #SeriesToc {
+      @apply bg-neutral-100;
+      @apply py-4 px-4;
+      ul {
+        @apply m-0 pt-2 pl-2;
+        @apply list-none;
+        li {
+          @apply m-0 mb-2;
+          @apply text-neutral-700;
+          a {
+            @apply no-underline;
+            @apply text-neutral-700;
+            &:hover {
+              @apply underline;
+              @apply text-neutral-900;
+              @apply decoration-neutral-900;
+            }
+          }
+       }
+      }
+    }
+  }
+  
+  .dark {
+    summary {
+      @apply text-neutral-200;
+      @apply bg-neutral-600;
+    }
+    #SeriesToc {
+      @apply bg-neutral-700;
+      ul {
+        li {
+          @apply text-neutral-200;
+          a {
+            @apply text-neutral-200;
+            &:hover {
+              @apply text-neutral-50;
+              @apply decoration-neutral-50;
+            }
+          }
+        }
+      }
+    }
+  }
+  

@@ -1,0 +1,34 @@
+{{ if $.Page.Params.series }}
+  {{ $class := .Get "class" }}
+  {{ $series := $.Page.Params.series }}
+  {{ $seriesName := index $series 0 | lower }}
+  {{ $seriesNameURL := replace $seriesName " " "-" }}
+  {{ $seriesOpen := $.Page.Params.series_open | default ( .Site.Params.article.series_open | default false) }}
+  
+  {{ $i18n_part_of := i18n "article_part_of_series" | default "This article is part of a series." }}
+  {{ $i18n_part := i18n "article_part" | default "Part" }}
+  {{ $i18n_this_article := i18n "article_this_article" | default "This article." }}
+
+  <details class="series-toc {{ with $class }}{{ . }}{{ end }}" {{ if $seriesOpen }} open {{ end }}>
+    <summary>
+      {{ index $series 0 }} - {{ $i18n_part_of }}
+    </summary>
+    <nav id="SeriesToc">
+      <ul>
+        {{ range $post := sort (index .Site.Taxonomies.series $seriesNameURL) "Params.series_order" }}
+        {{ if eq $post.Permalink $.Page.Permalink }}
+        <li>
+          {{ $i18n_part }} {{ $post.Params.series_order }}: {{ $i18n_this_article }}
+        </li>
+        {{ else }}
+        <li>
+          <a href="{{$post.Permalink}}">
+            {{ $i18n_part }} {{ $post.Params.series_order }}: {{ $post.Params.title}}
+          </a>
+        </li>
+        {{end}}
+        {{end}}
+      </ul>
+    </nav>
+  </details>
+{{ end}}
