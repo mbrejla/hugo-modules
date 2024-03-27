@@ -55,7 +55,7 @@ series_open: true
 You can also set the default open state globally via your params.toml
 
 ```toml
-[series-toc]
+[series_toc]
   series_open = true
 ```
 
