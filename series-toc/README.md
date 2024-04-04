@@ -49,8 +49,13 @@ series: ["Name of series"]
 series_order: 01
 # Choose if module starts opened (default: false) 
 series_open: true
+#If you place the series-toc at the top of the article include a manual summary 
+summary: "Summary of article"
 ---
 ```
+
+**Due to Hugos way of generating summaries (and no simple way to filter shortcode content from it), you should use the frontmatter parameter 'summary' for article summaries. Otherwise {{< series-toc >}}-contents will show up in the summary, if used at the top of an article.**
+
 
 You can also set the default open state globally via your params.toml
 
@@ -58,7 +63,6 @@ You can also set the default open state globally via your params.toml
 [series_toc]
   series_open = true
 ```
-
 
 ### Article Body
 
